@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: white;
+  background-color: black;
+  padding: 30px;
+}
+.laodingContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.itemz {
+  fill: #772bd8;
+  height: 60px;
+  width: 60px;
+}
+.btnContainer {
+  margin-bottom: 40px;
+  text-align: right;
+}
+.btnContainer button {
+  border-radius: 8px;
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+}
+.btnPurple {
+  color: white;
+  background-color: #772bd8;
+}
+.btnRed {
+  color: white;
+  background-color: red;
+}
+.btnGreen {
+  color: white;
+  background-color: green;
+}
+.btnBlue {
+  color: white;
+  background-color: blue;
+}
+.btnDeeppink {
+  color: white;
+  background-color: deeppink;
+}
+@media (min-width: 768px) {
+  body {
+    padding: 25px 50px;
+  }
+  .laodingContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1360px) {
+  .btnContainer {
+    margin-bottom: 60px;
+    text-align: right;
+  }
+  .laodingContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

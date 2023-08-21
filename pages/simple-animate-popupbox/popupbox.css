@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.sanipopup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 550px;
+    background-color: #1a242a;
+}
+.sanipopup .title {
+    position: absolute;
+    color: #fff;
+    margin-top: -20%;
+    display: block;
+}
+.sanipopup .title.hidetitle {
+    display: none;
+}
+.container {
+    position: relative;
+    width: 0px;
+    height: 0px;
+    background-color: #374447;
+    border-radius: 25px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #374447;
+    bottom: -15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.5s;
+    transform: rotate(40deg);
+}
+.container.active {
+    width: 350px;
+    height: 350px;
+    transition-delay: 0.5s;
+}
+.container.active::before {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+.container .content {
+    min-width: 350px;
+    padding: 35px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0);
+}
+.container .content h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.container .content p {
+    font-size: 16px;
+}
+.container.active .content {
+    opacity: 1;
+    transition: 0.5s;
+    transform: scale(1);
+}
+.togglebtn {
+    position: absolute;
+    bottom: -20px;
+    min-width: 60px;
+    height: 60px;
+    background-color: #0bcf9c;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.togglebtn::before {
+    content: "+";
+    position: absolute;
+    font-size: 2.5em;
+    color: #fff;
+}
+.container.active .togglebtn {
+    bottom: -90px;
+    transform: rotate(135deg);
+    background-color: #ff5a57;
+}
+.secsectionz {
+    height: 500px;
+    background-image: #F2F2F2; 
+    text-align: center;
+    margin-top: 120px;
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    overflow-x: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+  
+  #external-events {
+    position: fixed;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+  }
+  
+  #external-events .fc-event {
+    cursor: move;
+    margin: 3px 0;
+  }
+  
+  #calendar-container {
+    position: relative;
+    z-index: 1;
+    margin-left: 200px;
+  }
+  
+  #calendar {
+    max-width: 1100px;
+    margin: 20px auto;
+  }

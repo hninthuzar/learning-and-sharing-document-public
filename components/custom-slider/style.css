@@ -1,0 +1,36 @@
+.status {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.carlight_container {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.navcontainer {
+    position: absolute;
+}
+
+.navdots  {
+    position: absolute;
+    top: 200px;
+    display: flex;
+
+}
+.dots {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    margin-right: 10px;
+    list-style: none;
+}
+.dots.active {
+    background-color: red;
+}

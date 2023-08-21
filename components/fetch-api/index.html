@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body >
+    <div class="container">
+        <h2>Fetching Api</h2>
+        <div class="news"></div>
+    </div>
+
+    <script>
+
+        fetch('https://newsapi.org/v2/everything?q=tesla&from=2022-06-03&sortBy=publishedAt&apiKey=2332073df9ff4be98dfc224ae8d8584a')
+        .then(response => response.json())
+        .then(data => {
+            let articles = data.articles;
+            let news = document.querySelector(".news");
+            data.articles.map(function (el, index){
+                console.log(el);
+                news.innerHTML += `
+                <div class="card">
+                    <img class="card-img" src="${el.urlToImage}" altl="">
+                    <h4>${el.title}</h4>
+                </div>`;
+            }); 
+        });
+
+        // fetch('https://newsapi.org/v2/everything?q=tesla&from=2022-06-03&sortBy=publishedAt&apiKey=2332073df9ff4be98dfc224ae8d8584a')
+        // .then(function(response) {
+        //     console.log(response.data);
+        //     let articles = response.data.articles;
+        //     let news = document.querySelector(".news");
+        //     data.articles.map(function (el, index){
+        //         console.log(el);
+        //         news.innerHTML += `
+        //         <div class="card">
+        //             <img class="card-img" src="${el.urlToImage}" altl="">
+        //             <h4>${el.title}</h4>
+        //         </div>`;
+        //     });
+        // })
+        // .catch (function() {
+        //     console.log("fffg");
+        // })
+
+        // async function postdata() {
+        //     const result = await fetch('https://newsapi.org/v2/everything?q=tesla&from=2022-06-03&sortBy=publishedAt&apiKey=2332073df9ff4be98dfc224ae8d8584a', {
+        //         // method: 'GET',
+        //         // code: 'cors',
+        //         // cache: 'no-cache',
+        //         // credentials: 'same-origin',
+        //         // headers: {
+        //         //     'Content-Type': 'application/json'
+        //         // }
+        //     });
+
+        //     return result.json();
+        // }
+        // const datareult = postdata();
+        // console.log({datareult});
+        
+    </script>
+</body>
+</html>

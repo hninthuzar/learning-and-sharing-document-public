@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: #181C32;
+    color: white;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+h1 {
+    text-transform: uppercase;
+}
+#displayz {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.input-boxz input {
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+.input-boxz input:focus,
+.input-boxz input:focus-visible {
+    outline: 0;
+}
+/* hide arrow from number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-top: 30px;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+button:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+    transition: all 0.3s;
+}

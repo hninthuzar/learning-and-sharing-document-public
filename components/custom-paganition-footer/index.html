@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Paganition</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body >
+  
+  <div>
+      <table id="request-table">
+    </table>
+  </div>
+
+  <div class="clearfix">
+    <div class="box options">
+      <label>Requests Per Page: </label>
+        <select id="req_per_page" onchange="filter_requests()">
+        <option>5</option>
+        <option>10</option>
+        <option>ALL</option>
+      </select>
+    </div>
+    <div class="box pagination">
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
+    
+</body>
+</html>

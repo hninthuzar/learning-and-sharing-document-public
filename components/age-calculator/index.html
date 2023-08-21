@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+            
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <div id="displayz">Please, Enter Real Date!</div>
+        <div class="input-boxz">
+            <input type="number" id="dd" placeholder="DD" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />
+            <input type="number" id="mm" placeholder="MM" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" />
+            <input type="number" id="yy" placeholder="YYYY" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" />
+        </div>
+        <button id="calcz">Calculate</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

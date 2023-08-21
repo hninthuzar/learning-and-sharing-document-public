@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #fead06, #c00def);
+}
+.container {
+    position: relative;
+    padding: 70px 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+.container h2 {
+    color: #111;
+    margin-bottom: 45px;
+    line-height: 1em;
+    font-weight: 500;
+    padding-left: 10px;
+    border-left: 5px solid #e91e63;
+}
+.container .inputBox,
+.container .selectBox {
+    position: relative;
+    width: 300px;
+    height: 46px;
+    margin-bottom: 35px;
+}
+.container .inputBox:last-child {
+    margin-bottom: 0;
+}
+.container .inputBox input,
+.container .selectBox select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    color: #111;
+    font-weight: 300;
+    z-index: 2;
+}
+.container .inputBox span,
+.container .selectBox span {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    padding: 10px;
+    display: inline-block;
+    font-size: 16px;
+    color: #111;
+    font-weight: 300;
+    transition: 0.5s;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 1;
+}
+.container .inputBox input:focus ~ span,
+.container .inputBox input:valid ~ span,   /* if not have input field required, can remove this code line */
+.container .inputBox input:not(:placeholder-shown) ~ span,
+.container .selectBox select:valid ~ span {
+    visibility: visible;
+    transform: translateX(-10px) translateY(-32px);
+    font-size: 14px;
+}
+.container .inputBox input::placeholder {
+    transition: 0.5s;
+}
+.container .inputBox input:focus::placeholder,
+.container .inputBox input:focus::-webkit-input-placeholder {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-10px) translateY(-32px);
+}
+
+.container .inputBox input[type="submit"] {
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+.container .inputBox input[type="submit"]:hover {
+    background: linear-gradient(45deg, #e91e63, #c00def);
+    transition: all 0.3s ease-in-out;
+}

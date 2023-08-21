@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+:root {
+    --themecolor: #7200a3;
+    --secondcolor: #f4dafe;
+    --thirdcolor: #9400d4;
+    --light: #f6f8f8;
+    --black: #333;
+    --white: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: var(--light);
+    color: var(--black);
+}
+.dark {
+    background-color: var(--black);
+    color: var(--light);
+}
+header {
+    color: var(--white);
+    background: var(--themecolor);
+    display: flex;
+    align-items: center;
+    padding: 15px 100px;
+    position: relative;
+}
+header ul {
+    list-style: none;
+    display: flex;
+}
+header nav ul li {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+header nav ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+header nav ul li a:hover {
+    color: var(--secondcolor);
+    transition: all 0.3s;
+}
+header a {
+    color: var(--white);
+    text-decoration: none;
+}
+header .logoz {
+    margin-right: auto;
+}
+header .iconz li {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+.iconz {
+    margin-left: 30px;
+}
+.hidden {
+    display: none!important;
+}
+.show {
+    display: block!important;
+}
+.mobilez {
+    display: none!important;
+}
+.ml-15 {
+    margin-left: 15px;
+}
+.mr-15 {
+    margin-right: 15px;
+}
+
+@media (max-width: 1023px) {
+    header {
+        padding: 15px 70px;
+    }
+    header .logoz h1 {
+        font-size: 30px;
+    }
+    header nav ul li {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    header nav ul li a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 767px) {
+    .mobilez {
+        display: flex!important;
+    }
+    header nav {
+        position: absolute;
+        top: 100%;
+        height: auto;
+        background-color: var(--thirdcolor);
+        width: 100%;
+        left: 0px;
+        text-align: center;
+    }
+    header nav ul {
+        flex-direction: column;
+        padding: 30px;
+    }
+    header nav ul li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    header .logoz h1 {
+        font-size: 26px;
+    }
+}
+@media (max-width: 540px) {
+    header {
+        padding: 15px 25px;
+    }
+    header .logoz h1 {
+        font-size: 25px;
+    }
+}

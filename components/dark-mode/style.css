@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: aliceblue;
+    color: #333;
+}
+
+main {
+    height: 100%;
+    text-align: center;
+    padding-top: 100px;
+}
+main h1 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+header {
+    padding: 15px 150px;
+    background-color: darkslategray;
+    color: aliceblue;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center
+}
+li:not(.logoz) {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 500;
+}
+li.logoz {
+    margin-right: auto;
+}
+a {
+    color: aliceblue;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+a:hover {
+    color: #f47d31;
+    transition: all 0.3s;
+}
+li.logoz a:hover {
+    color: aliceblue;
+}
+.w-6 {
+    width: 1.5rem;
+}
+.h-6 {
+    height: 1.5rem;
+}
+.iconz {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.lightz,
+.darkz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.lightz:hover svg,
+.darkz:hover svg {
+    stroke: #f47d31;
+    transition: all 0.3s;
+}
+.hidden {
+    display: none;
+}
+.dark {
+    background-color: #333;
+    color: aliceblue;
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 70px;
+    }
+}
+@media (max-width: 767px) {
+    ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        margin: auto;
+        padding: auto;
+        margin-bottom: 10px;
+    }
+    .iconz {
+        margin: auto;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WowJS</title>
+    <link rel="stylesheet" href="./animate.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+     <header>
+        <a href="#"><h1>WOW.JS</h1></a>
+     </header>       
+    <div class="mainz">
+        <div class="wow bounceInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+            <h2>Content to Reveal Here</h2>
+        </div>
+        <div class="wow bounceInUp cuteCat" data-wow-duration="3s" data-wow-delay="1s">
+            <div class="imgContainer">
+                <label class="imgLabel">
+                    <div class="wow pulse" data-wow-duration="6s" data-wow-delay="1.5s" data-wow-iteration="infinite">Cute Cat</div>
+                </label>
+                <img src="./img/cute-cat.jpg" alt="cute cat"/>
+            </div>
+        </div>
+    </div>
+    <section class="runz wow slideInRight" data-wow-duration="6s" data-wow-delay="1.5s"  data-wow-iteration="infinite">
+        running text
+    </section>
+    <footer class="wow bounceInUp" data-wow-duration="3s" data-wow-delay="1.2s">
+        <p>Testing WowJS</p>
+    </footer>
+        
+    <script src="./wow.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
