@@ -19,6 +19,10 @@ body {
 a {
     text-decoration: none;
 }
+header {
+    transition: all 0.5s;
+    background-color: white;
+}
 .stickyz {
     position: sticky;
     top: 0;
@@ -36,8 +40,6 @@ a {
     justify-content: space-between;
     padding-top: 15px;
     padding-bottom: 15px;
-    transition: all 0.5s;
-    background-color: white;
 }
 .header .logoz {
     max-width: 85px;
