@@ -21,11 +21,13 @@ body {
 }
 .mainContainer {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 40px;
 }
 .imgContainer,
 .contentContainer {
-    width: 50%;
+    width: 100%;
 }
 .imgContainer {
     text-align: center;
@@ -44,4 +46,14 @@ body {
 }
 .paragraph {
     margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .mainContainer {
+        flex-wrap: nowrap;
+    }
+    .imgContainer,
+    .contentContainer {
+        width: 50%;
+    }
 }
