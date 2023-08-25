@@ -32,7 +32,8 @@ body {
 .imgContainer {
     text-align: center;
 }
-.imgContainer img {
+.imgContainer img,
+.imgContainer video {
     border-radius: 10px;
     width: 100%;
     width: 230px;
