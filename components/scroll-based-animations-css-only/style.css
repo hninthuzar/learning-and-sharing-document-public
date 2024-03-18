@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+html {
+  scrollbar-width: thin;
+}
+body {
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1520px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 25px;
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: banner-img-animation linear;
+  animation-timeline: view();
+  animation-range: exit;
+  transform-origin: bottom;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background: linear-gradient(90deg, #17161ceb 30%, #7597de9e); */
+  background: linear-gradient(90deg, #17161ceb 30%, transparent);
+  z-index: 1;
+}
+.bannerContent {
+  position: relative;
+  color: white;
+  z-index: 2;
+  max-width: 1440px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit;
+}
+.bannerContent h1 {
+  margin-bottom: 24px;
+  font-size: 42px;
+}
+.bannerContent p {
+  font-weight: 300;
+  max-width: 550px;
+}
+.flowerContainer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.textContainer {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.textContainer h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.textContainer p {
+  font-weight: 300;
+}
+.imgContainer {
+  height: 550px;
+  border-radius: 6px;
+}
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+footer {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background: linear-gradient(-45deg, #333, #555);
+  color: white;
+  text-align: center;
+}
+.bg-sunflower {
+  background-color: #7a6a00;
+}
+.bg-colorFull {
+  background-color: #415225;
+}
+.bg-daisy {
+  background-color: #9ecac1;
+}
+.bg-dandelion {
+  background: linear-gradient(45deg, #7fad72, #a9b1e6);
+}
+.bg-tulip {
+  background: linear-gradient(-45deg, #c85a50, #bebac7);
+}
+.moreInfo {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.moreInfo ul {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  scrollbar-width: thin;
+  overflow-x: hidden;
+  /* animation: scrolling linear 30s;
+  animation-timeline: scroll(); */
+  /* animation: bg-shift linear;
+  animation-timeline: scroll(inline); */
+}
+.moreInfo ul:not(:last-child) {
+  margin-bottom: 25px;
+}
+.moreInfo ul li {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  padding: 5px 20px;
+  border-radius: 4px;
+  background: linear-gradient(-45deg, #c85a50, #bebac7);
+  text-wrap: nowrap;
+}
+.moreInfo ul:last-child {
+  animation-direction: reverse;
+}
+.scroll-watcher {
+  height: 8px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: limegreen;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .imgContainer > img {
+    scale: 0.8; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    /* animation-range: 250px 500px; */
+    animation-range: entry;
+  }
+  @keyframes fade-in {
+    to { scale: 1; opacity: 1; }
+  }
+}
+
+@keyframes scroll-watcher {
+  to { scale: 1 1; }
+}
+
+@keyframes scrolling {
+  to { 
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+@keyframes bg-shift {
+  from { background: red; }
+  to { background: blue;}
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes banner-img-animation {
+  25% { opacity: 1; }
+  85%, 100% { opacity: 0; scale: 3; }
+}
+
+
+@media (min-width: 460px) {
+  .container {
+    max-width: 1520px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .banner {
+    padding: 40px;
+  }
+}
