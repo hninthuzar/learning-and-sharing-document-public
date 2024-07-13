@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    min-height: 100vh;
+    background: #000;
+    padding-inline: 10%;
+}
+h2 {
+    position: relative;
+    color: aliceblue;
+    font-size: 26px;
+    text-align: center;
+}
+section {
+    animation: animateBg 10s linear infinite;
+}
+@keyframes animateBg {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+section .loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+section .loader span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+}
+section .loader span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2db92d;
+    box-shadow: 0 0 10px #2db92d,
+                0 0 20px #2db92d,
+                0 0 40px #2db92d,
+                0 0 60px #2db92d,
+                0 0 80px #2db92d,
+                0 0 100px #2db92d;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    80%, 100% {
+        transform: scale(0);
+    }
+}
+
+@media (max-width: 560px) {
+    h2 {
+        font-size: 20px;
+    }
+    section .loader {
+        width: 80px;
+        height: 80px;
+    }
+}
