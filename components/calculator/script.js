@@ -11,6 +11,8 @@ function calc(e) {
   switch(val) {
     case 'AC': displayz.innerText = '';
                 break;
+    case '<-': displayz.innerText = displayz.innerText.slice(0, -1);
+                break;
     case '=': try {
                 if(displayz.innerText === '') {
                   displayz.innerText = '';
